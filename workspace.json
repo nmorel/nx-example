@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "components": "libs/components",
     "klaxoon": "apps/klaxoon",
     "klaxoon-e2e": "apps/klaxoon-e2e"
   }
