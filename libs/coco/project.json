@@ -1,0 +1,42 @@
+{
+  "root": "libs/coco",
+  "sourceRoot": "libs/coco/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/coco",
+        "tsConfig": "libs/coco/tsconfig.lib.json",
+        "project": "libs/coco/package.json",
+        "entryFile": "libs/coco/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "assets": [
+          {
+            "glob": "libs/coco/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/coco/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/coco"],
+      "options": {
+        "jestConfig": "libs/coco/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

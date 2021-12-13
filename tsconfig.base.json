@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nx-klaxoon/coco": ["libs/coco/src/index.ts"],
       "@nx-klaxoon/components": ["libs/components/src/index.ts"]
     }
   },
